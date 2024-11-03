@@ -27,7 +27,7 @@ jobs:
         EC2_USER: ${{ secrets.EC2_USER }}
         REPO_URL: ${{ secrets.REPO_URL }}
       run: |
-        ssh -i ec2-key.pem -o StrictHostKeyChecking=no $EC2_USER@$EC2_HOST << EOF
+        ssh -i ec2-key.pem -o StrictHostKeyChecking=no $EC2_USER@$EC2_HOST << 'EOF'
           # Navigate to the web directory or clone if it doesn't exist
           if [ ! -d "/var/www/html/NLP-SCE" ]; then
             sudo git clone $REPO_URL /var/www/html
