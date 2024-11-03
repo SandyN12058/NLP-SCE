@@ -37,5 +37,5 @@ jobs:
           fi
           
           # Restart Nginx
-          sudo systemctl restart nginx dfk
+          sudo systemctl restart nginx
         EOF
