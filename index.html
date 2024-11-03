@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NLP Keyword Highlighter</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <img src="./logo.jpg">
+                <p>NLP.AI</p>
+            </div>
+        <div class="hamburger">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
+        <nav class="navbar">
+            <ul>
+                <li>
+                    <a href="#" class="active">Home</a>
+                </li>
+                <li>
+                    <a href="#" id="topic" >Topic</a>
+                </li>
+                <li>
+                    <a href="#" id="about">About</a>
+                </li>
+                <li class="contact">
+                    <a href="">Contact</a>
+                </li>
+            </ul>
+        </nav>
+        </div>
+    </header>
+
+
+
+  <div class="container-wrapper">
+    <div class="container">
+        <h2>NLP Keyword Highlighter</h2>
+        <p>Enter text and a keyword to highlight:</p>
+        <textarea id="textInput" placeholder="Enter text here..." required></textarea>
+        <input type="text" id="keywordInput" placeholder="Enter keyword..." required>
+        <button class="button" onclick="highlightKeyword()">Search</button>
+        
+        <div id="output" class="output"></div>
+      </div>
+  </div>
+
+<script src="./script.js"></script>
+</body>
+</html>

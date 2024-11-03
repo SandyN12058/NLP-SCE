@@ -1,0 +1,301 @@
+/* Base styling for body */
+@import url('https://fonts.googleapis.com/css2?family=Audiowide');
+ 
+body {
+  font-family: Arial, sans-serif;
+  /* display: flex; */
+  text-align: center;
+  height: auto;
+  height: 100vh;
+  margin: 0;
+  background-attachment: fixed;
+  background-size: cover;
+  background: linear-gradient(135deg, cyan 0%, #6a11cb 100%);
+  color: #11101b;
+  font-size: 15px;
+  overflow: hidden;
+}
+
+.container-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Center container */
+.container {
+    padding: 30px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
+    animation: fadeIn 1.2s ease-in-out;
+    max-width: 500px;
+    width: 90%;
+    margin: 50px 0;
+    font-size: 1em;
+}
+
+.container h2 {
+    font-size: 1.5em;
+    margin-top: 0;
+    font-weight: bold;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+@media only screen and (max-width: 760px) {
+    .container {
+        max-width: 400px;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    body {
+        font-size: 15px;
+    }
+    .container {
+        max-width: 400px;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    body {
+        font-size: 14px;
+    }
+    .container {
+        max-width: 350px;
+    }
+}
+
+@media only screen and (max-width: 424px) {
+    body {
+        font-size: 14px;
+    }
+    .container {
+        max-width: 300px;
+    }
+}
+
+@media only screen and (max-width: 350px) {
+    body {
+        font-size: 9px;
+    }
+    
+    .container {
+        max-width: 240px;
+    }
+}
+
+/* Animation effect */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+input[type="text"], textarea {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    padding: 0.8em;
+    margin: 0.5em 0;
+    border: 1px solid lightgrey;
+    border-radius: 4px;
+    outline: none;
+    font-size: 1em;
+    box-sizing: border-box;
+}
+
+textarea {
+  height: 5em;
+  resize: none;
+}
+
+input[type="text"]:hover, textarea:hover {
+    box-shadow: 0px 0px 20px gray;
+    border: 1px solid royalblue;
+}
+
+.button {
+  background: #ff5722;
+  color: #fff;
+  border: none;
+  padding: 0.8rem 2rem;
+  font-size: 1em;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.button:hover {
+  background: #ff784e;
+  transform: scale(1.05);
+}
+
+.container.move-up {
+    transform: translateY(-20px); /* Moves the container 20px up */
+}
+
+.output {
+  height: auto;
+  max-height: 100px;
+  overflow-y: auto; /* Enables vertical scrolling if content overflows */
+  padding: 1rem;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  margin-top: 1rem;
+  white-space: pre-wrap;
+  font-size: 1.1em;
+  line-height: 1.6;
+  text-align: left;
+  display: none;
+}
+
+.highlight {
+  background-color: yellow;
+  color: black;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+
+header {
+    width: 100vw;
+    height: 80px;
+    background: #11101b;
+    background: white;
+    color: #11101b;
+    box-shadow: 0px 0px 30px grey;
+    /* display: flex; */
+    /* align-items: center; */
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 100px;
+}
+
+header ul li a {
+    text-decoration: none;
+    font-weight: bold;
+}
+
+header ul li {
+    list-style-type: none;
+}
+
+.logo {
+font-weight: bold;
+display: flex;
+align-items: center;
+justify-content: center;
+/* color: #fefefe; */
+}
+
+.logo img {
+width: 2.5rem;
+height: 2.5rem;
+}
+
+.logo p {
+font-size: 1.3rem;
+margin-left: .5rem;
+font-family: 'Audiowide';
+}
+
+.hamburger {
+display: none;
+}
+
+.navbar ul {
+display: flex;
+padding-left: 0;
+}
+
+.navbar ul li a {
+display: block;
+color: #11101b;
+font-size: 1.1rem;
+margin: 0 5px;
+padding: 10px 25px;
+border-radius: 50px;
+transition: 0.2s;
+}
+
+.navbar .contact a {
+    background: #11101b;  
+    color: white;  
+}
+
+.navbar ul li a:hover {
+background-color: #fefefe;
+background: linear-gradient(135deg, cyan 0%, #6a11cb 100%);
+color: #fefefe;
+transition: all 0.2s ease;
+box-shadow: 1px 2px 10px  grey;
+}
+
+@media only screen and (max-width: 1320px) {
+.header-container {
+    padding: 0 50px;
+}
+}
+
+@media only screen and (max-width: 1100px) {
+.header-container {
+    padding: 0 30px;
+}
+}
+
+@media only screen and (max-width: 700px) {
+header {
+    display: flex;
+    width: 100vw;
+}
+
+.header-container {
+    width: 100%;
+}
+
+.hamburger {
+    display: block;
+    cursor: pointer;
+}
+.hamburger .line {
+    width: 30px;
+    height: 3px;
+    margin: 6px 0;
+    background: #11101b;
+}
+.navbar {
+    /* height: 400px; */
+    height: 0;
+    width: 100vw;
+    position: absolute;
+    top: 80px;
+    left: 0;
+    right: 0;
+    background: #11101b;
+    transition: 0.2s;
+    overflow: hidden;
+}
+.navbar.active {
+    height: 400px;
+}
+.navbar ul {
+    display: block;
+    width: fit-content;
+    margin: 50px auto 0 auto;
+    text-align: center;
+    transition: 0.5s;
+    opacity: 0;
+}
+.navbar.active ul {
+    opacity: 1;
+}
+.navbar ul li a{
+    margin-bottom: 12px;
+    color: white;
+}
+}
