@@ -30,7 +30,7 @@ jobs:
         ssh -i ec2-key.pem -o StrictHostKeyChecking=no $EC2_USER@$EC2_HOST << 'EOF'
           # Navigate to the web directory or clone if it doesn't exist
           if [ ! -d "/var/www/html/NLP-SCE" ]; then
-            sudo git clone ${{ secrets.REPO_URL }} /var/www/html
+            sudo git clone ${{ secrets.REPO_URL }} /var/www/html/NLP-SCE
           else
             cd /var/www/html/NLP-SCE
             sudo git pull origin main  # or your branch
